@@ -1,6 +1,4 @@
-import javax.sound.midi.Soundbank;
-
-public class Hello {
+public class Hello2 {
     public void printHello(){
         System.out.println("hello world");
         System.out.println("he");
