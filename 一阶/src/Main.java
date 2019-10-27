@@ -6,29 +6,16 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        Sportsman mike = new Sportsman("mike");
-        mike.getBmiNumber();
-        mike.advice1();
-        mike.getMedicalHistory();
-        mike.advice2();
-        mike.getSportsHistory();
-        mike.getProfessionalSportsHistory();
-        if (mike.isExerciseAccess()) {//是否可以正常训练
-            if (mike.isSportsHistory()) {//是否有过健身经验
-                mike.setIntensity(true);
-                mike.advice3();
-            } else {
-                mike.advice4();
-            }
-        }
-    }
 
-    public void hello(){
-        System.out.println("hello!");
-    }
+       RuleDatabase ruleDatabase = new RuleDatabase();
+       ruleDatabase.add(new Node("鱼"),new Node("会游泳"),new Node("很好吃"));
+       ruleDatabase.add(new Node("狗"),new Node("会游泳"),new Node("很好吃"));
+       ruleDatabase.add(new Node("猫"),new Node("会游泳"),new Node("很好吃"));
+       ruleDatabase.add(new Node("老虎"),new Node("会游泳"),new Node("很好吃"));
+       ruleDatabase.delete(new Node("老虎"),new Node("会游泳"),new Node("很好吃"));
 
-    public void hello2(){
-        System.out.println("hello!");
-        System.out.println("hello2!");
+        System.out.println("");
     }
+    
 }
+
