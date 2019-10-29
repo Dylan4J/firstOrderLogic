@@ -25,12 +25,13 @@ public class Sportsman {
     public void add(Node node){
         client.add(node);
     }
-    /*
+
+    /**
     打印用户状态链表
      */
-
     public void showState(){
         Iterator<Node> iterator = client.iterator();//遍历整个用户状态链表
+        System.out.println("用户当前数据库状态如下：");
         while (iterator.hasNext()) {
             Node node =iterator.next();
             System.out.print(node.parameter + "   ");
@@ -44,16 +45,18 @@ public class Sportsman {
             System.out.println("");
         }
     }
-    /*
+
+    /**
     返回用户当前状态的大小
      */
     public int getStateSize(){
         return client.size();
     }
-    /*
+
+    /**
     获取咨询者状态处于某一次序的状态信息
      */
-    public Node getClientStateNodeAt(int index){
+    public Node getStateNodeAt(int index){
         return client.get(index);
     }
 

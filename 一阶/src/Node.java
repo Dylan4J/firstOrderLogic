@@ -25,10 +25,37 @@ public class Node {
         this.value = value;
     }
 
+    /**
+     * 这个函数是用来比较节点的参数名称是否一样的
+     * @param object 需要进行比较的节点
+     * @return
+     */
+    public boolean equalsParameter(Object object) {
+        Node node = (Node) object;
+        if (this.parameter.equals(node.parameter)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    /**
+     * 这个函数是用来比较节点的参数值是否一样的
+     * @param object 需要进行比较的节点
+     * @return
+     */
+    public boolean equalsValue(Object object) {
+        Node node = (Node) object;
+        if (this.value == node.value) {
+            return true;
+        } else {
+            return false;
+        }
+    }
     @Override
     public boolean equals(Object object){
         Node node = (Node) object;
-        if (this.parameter == node.parameter && this.value == node.value) {
+        if (equalsParameter(node) && equalsValue(node)) {
             return true;
         } else {
             return false;
